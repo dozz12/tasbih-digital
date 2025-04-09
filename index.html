@@ -9,13 +9,19 @@
 </head>
 <body>
   <div class="container">
+    <div class="language-switcher">
+      <span onclick="setLanguage('id')">Indonesia</span> |
+      <span onclick="setLanguage('en')">English</span> |
+      <span onclick="setLanguage('fr')">Français</span> |
+      <span onclick="setLanguage('ar')">العربية</span>
+    </div>
+
     <div class="header">
-      <p class="kalimat-tauhid">لَا إِلٰهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ</p>
-      <h1>Tasbih Digital</h1>
+      <h1 id="title">Tasbih Digital</h1>
     </div>
 
     <div class="control">
-      <label for="dzikir-select">Pilih Dzikir</label>
+      <label for="dzikir-select" id="label-dzikir">Pilih Dzikir</label>
       <select id="dzikir-select" onchange="updateDzikir()">
         <option value="subhanallah">Subhanallah</option>
         <option value="alhamdulillah">Alhamdulillah</option>
@@ -24,11 +30,11 @@
     </div>
 
     <div class="counter-box">
-      <button onclick="increment()">+ Tambah</button>
+      <button id="btn-tambah" onclick="increment()">+ Tambah</button>
       <p id="current-count" class="counter">0</p>
     </div>
 
-    <button class="reset-btn" onclick="resetCounts()">🔄 Reset Semua</button>
+    <button class="reset-btn" id="btn-reset" onclick="resetCounts()">🔄 Reset Semua</button>
 
     <footer>
       <p class="credit">Made with ❤️ by ThurZ and AndromedaDev</p>
