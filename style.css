@@ -1,87 +1,131 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #121212;
-  color: white;
-  text-align: center;
+/* Reset & Base Styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0e0e0e;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
 }
 
 .container {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
+  background-color: #1a1a1a;
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  text-align: center;
 }
 
-.kalimat-tauhid {
-  font-size: 24px;
-  color: #00ffcc;
-  margin-bottom: 10px;
-  font-family: 'Scheherazade', serif;
-}
-
-h1 {
-  color: #ffffff;
+/* Header */
+.header h1 {
+  font-size: 28px;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
-label, select {
-  font-size: 16px;
-  margin-top: 10px;
+.kalimat-tauhid {
+  font-size: 20px;
+  color: #00ffd0;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Dropdown */
+.control {
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #ccc;
 }
 
 select {
-  padding: 6px 12px;
-  border-radius: 5px;
+  background-color: #292929;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 12px;
   border: none;
-  background-color: #333;
-  color: white;
-}
-
-.dzikir-main {
-  margin-top: 30px;
-}
-
-.dzikir-main button {
-  font-size: 20px;
-  padding: 10px 30px;
-  background-color: #2196f3;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.dzikir-main p {
-  font-size: 28px;
-  margin-top: 10px;
-  color: #00e676;
-}
-
-.reset {
-  background-color: #e91e63;
-  color: white;
-  padding: 10px 30px;
   font-size: 16px;
-  border: none;
-  border-radius: 10px;
+  width: 100%;
   cursor: pointer;
-  margin-top: 30px;
+}
+
+/* Counter */
+.counter-box {
+  margin: 30px 0;
+}
+
+.counter-box button {
+  background-color: #00c853;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.counter-box button:hover {
+  background-color: #00e676;
+}
+
+.counter {
+  font-size: 48px;
+  margin-top: 20px;
+  color: #00e676;
+  font-weight: bold;
+}
+
+/* Reset Button */
+.reset-btn {
+  background-color: transparent;
+  color: #ff4081;
+  border: 2px solid #ff4081;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: #ff4081;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
 }
 
 .credit {
-  margin-top: 40px;
-  font-size: 14px;
-  color: #aaaaaa;
+  font-size: 13px;
+  color: #888;
 }
 
-/* Animasi pop */
+/* Pop Animation */
 @keyframes pop {
   0% { transform: scale(1); }
-  50% { transform: scale(1.5); }
+  50% { transform: scale(1.4); }
   100% { transform: scale(1); }
 }
 
 .pop-animation {
   animation: pop 0.3s ease;
 }
+
