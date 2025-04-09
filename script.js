@@ -21,7 +21,6 @@ function increment() {
   const el = document.getElementById('current-count');
   el.innerText = counts[currentDzikir];
 
-  // Animasi pop
   el.classList.remove('pop-animation');
   void el.offsetWidth;
   el.classList.add('pop-animation');
