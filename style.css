@@ -129,3 +129,20 @@ footer {
   animation: pop 0.3s ease;
 }
 
+.language-switcher {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.language-switcher span {
+  cursor: pointer;
+  padding: 0 6px;
+  color: #00e5ff;
+  transition: color 0.2s ease;
+}
+
+.language-switcher span:hover {
+  color: #ffffff;
+}
