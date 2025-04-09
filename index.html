@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tasbih Digital</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tasbih Digital Modern</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <p class="kalimat-tauhid">لَا إِلٰهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ</p>
-    <h1>Tasbih Digital</h1>
-
-    <label for="dzikir-select">Pilih Dzikir:</label>
-    <select id="dzikir-select" onchange="updateDzikir()">
-      <option value="subhanallah">Subhanallah</option>
-      <option value="alhamdulillah">Alhamdulillah</option>
-      <option value="allahuakbar">Allahu Akbar</option>
-    </select>
-
-    <div class="dzikir-main">
-      <button onclick="increment()">Tambah Dzikir</button>
-      <p id="current-count">0</p>
+    <div class="header">
+      <p class="kalimat-tauhid">لَا إِلٰهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ</p>
+      <h1>Tasbih Digital</h1>
     </div>
 
-    <button class="reset" onclick="resetCounts()">Reset</button>
-    <p class="credit">Made with ❤️ by ThurZ and AndromedaDev</p>
+    <div class="control">
+      <label for="dzikir-select">Pilih Dzikir</label>
+      <select id="dzikir-select" onchange="updateDzikir()">
+        <option value="subhanallah">Subhanallah</option>
+        <option value="alhamdulillah">Alhamdulillah</option>
+        <option value="allahuakbar">Allahu Akbar</option>
+      </select>
+    </div>
+
+    <div class="counter-box">
+      <button onclick="increment()">+ Tambah</button>
+      <p id="current-count" class="counter">0</p>
+    </div>
+
+    <button class="reset-btn" onclick="resetCounts()">🔄 Reset Semua</button>
+
+    <footer>
+      <p class="credit">Made with ❤️ by ThurZ and AndromedaDev</p>
+    </footer>
   </div>
 
   <script src="script.js"></script>
