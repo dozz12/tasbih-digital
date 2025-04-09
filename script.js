@@ -4,23 +4,32 @@ let counts = {
   allahuakbar: 0
 };
 
-function increment(type) {
-  counts[type]++;
-  const countId = `${type}-count`;
-  const el = document.getElementById(countId);
-  el.innerText = counts[type];
+let currentDzikir = 'subhanallah';
 
-  // Efek animasi pop
+function updateDzikir() {
+  currentDzikir = document.getElementById('dzikir-select').value;
+  updateDisplay();
+}
+
+function updateDisplay() {
+  const el = document.getElementById('current-count');
+  el.innerText = counts[currentDzikir];
+}
+
+function increment() {
+  counts[currentDzikir]++;
+  const el = document.getElementById('current-count');
+  el.innerText = counts[currentDzikir];
+
+  // Animasi pop
   el.classList.remove('pop-animation');
-  void el.offsetWidth; // paksa browser untuk "reset" animasi
+  void el.offsetWidth;
   el.classList.add('pop-animation');
 }
 
 function resetCounts() {
   for (let key in counts) {
     counts[key] = 0;
-    const el = document.getElementById(`${key}-count`);
-    el.innerText = 0;
-    el.classList.remove('pop-animation');
   }
+  updateDisplay();
 }
