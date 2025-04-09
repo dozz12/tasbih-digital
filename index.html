@@ -11,22 +11,20 @@
     <p class="kalimat-tauhid">لَا إِلٰهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ</p>
     <h1>Tasbih Digital</h1>
 
-    <div class="tasbih-box">
-      <div class="dzikir">
-        <button onclick="increment('subhanallah')">Subhanallah</button>
-        <p id="subhanallah-count">0</p>
-      </div>
-      <div class="dzikir">
-        <button onclick="increment('alhamdulillah')">Alhamdulillah</button>
-        <p id="alhamdulillah-count">0</p>
-      </div>
-      <div class="dzikir">
-        <button onclick="increment('allahuakbar')">Allahu Akbar</button>
-        <p id="allahuakbar-count">0</p>
-      </div>
+    <label for="dzikir-select">Pilih Dzikir:</label>
+    <select id="dzikir-select" onchange="updateDzikir()">
+      <option value="subhanallah">Subhanallah</option>
+      <option value="alhamdulillah">Alhamdulillah</option>
+      <option value="allahuakbar">Allahu Akbar</option>
+    </select>
+
+    <div class="dzikir-main">
+      <button onclick="increment()">Tambah Dzikir</button>
+      <p id="current-count">0</p>
     </div>
 
     <button class="reset" onclick="resetCounts()">Reset</button>
+    <p class="credit">Made with ❤️ by ThurZ and AndromedaDev</p>
   </div>
 
   <script src="script.js"></script>
