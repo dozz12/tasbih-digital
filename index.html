@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tasbih Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <p class="kalimat-tauhid">لَا إِلٰهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ</p>
+    <h1>Tasbih Digital</h1>
+
+    <div class="tasbih-box">
+      <div class="dzikir">
+        <button onclick="increment('subhanallah')">Subhanallah</button>
+        <p id="subhanallah-count">0</p>
+      </div>
+      <div class="dzikir">
+        <button onclick="increment('alhamdulillah')">Alhamdulillah</button>
+        <p id="alhamdulillah-count">0</p>
+      </div>
+      <div class="dzikir">
+        <button onclick="increment('allahuakbar')">Allahu Akbar</button>
+        <p id="allahuakbar-count">0</p>
+      </div>
+    </div>
+
+    <button class="reset" onclick="resetCounts()">Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
