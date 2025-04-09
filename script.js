@@ -32,3 +32,38 @@ function resetCounts() {
   }
   updateDisplay();
 }
+
+const translations = {
+  id: {
+    title: "Tasbih Digital",
+    labelDzikir: "Pilih Dzikir",
+    btnTambah: "+ Tambah",
+    btnReset: "🔄 Reset Semua"
+  },
+  en: {
+    title: "Digital Tasbih",
+    labelDzikir: "Select Dhikr",
+    btnTambah: "+ Count",
+    btnReset: "🔄 Reset All"
+  },
+  fr: {
+    title: "Chapelet Numérique",
+    labelDzikir: "Choisir un Dhikr",
+    btnTambah: "+ Compter",
+    btnReset: "🔄 Réinitialiser"
+  },
+  ar: {
+    title: "المسبحة الرقمية",
+    labelDzikir: "اختر الذكر",
+    btnTambah: "+ عدّ",
+    btnReset: "🔄 إعادة الكل"
+  }
+};
+
+function setLanguage(lang) {
+  const t = translations[lang];
+  document.getElementById('title').innerText = t.title;
+  document.getElementById('label-dzikir').innerText = t.labelDzikir;
+  document.getElementById('btn-tambah').innerText = t.btnTambah;
+  document.getElementById('btn-reset').innerText = t.btnReset;
+}
